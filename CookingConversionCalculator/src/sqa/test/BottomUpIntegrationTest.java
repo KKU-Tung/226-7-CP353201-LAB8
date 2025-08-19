@@ -29,57 +29,57 @@ class BottomUpIntegrationTest {
     @Test
     void testTemperatureConverterFtoC() {
         double result = tempConv.convert(212, "fahrenheit", "celsius");
-        assertEquals(100, result, 0.001);
+        assertEquals(100, result);
     }
 
     @Test
     void testTemperatureConverterCtoF() {
         double result = tempConv.convert(100, "celsius", "fahrenheit");
-        assertEquals(212, result, 0.001);
+        assertEquals(212, result);
     }
 
     //Test MassConverter 
     @Test
     void testMassConverterCupToGram() {
         double result = massConv.convert(2, "cup", "gram");
-        assertEquals(250, result, 0.001);
+        assertEquals(250, result);
     }
 
     @Test
     void testMassConverterTbspToGram() {
         double result = massConv.convert(3, "tablespoon", "gram");
-        assertEquals(24, result, 0.001);
+        assertEquals(24, result);
     }
 
     //Test LiquidVolumeConverter 
     @Test
     void testLiquidConverterCupToMl() {
         double result = liquidConv.convert(1, "cup", "ml");
-        assertEquals(250, result, 0.001);
+        assertEquals(250, result);
     }
 
     @Test
     void testLiquidConverterTbspToMl() {
         double result = liquidConv.convert(2, "tablespoon", "ml");
-        assertEquals(30, result, 0.001);
+        assertEquals(30, result);
     }
 
     //Test CookingConversionCalculator
     @Test
     void testCalculatorMassConversion() {
         double result = calc.convert(2, "mass", "cup", "gram");
-        assertEquals(250, result, 0.001);
+        assertEquals(250, result);
     }
 
     @Test
     void testCalculatorLiquidConversion() {
         double result = calc.convert(1, "liquid", "cup", "ml");
-        assertEquals(250, result, 0.001);
+        assertEquals(250, result);
     }
 
     @Test
     void testCalculatorTemperatureConversion() {
         double result = calc.convert(212, "temperature", "fahrenheit", "celsius");
-        assertEquals(100, result, 0.001);
+        assertEquals(100, result);
     }
 }
